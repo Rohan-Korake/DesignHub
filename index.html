@@ -9,72 +9,102 @@
   <link rel="stylesheet" href="src/output.css" />
 </head>
 
-<body>
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-gray-950 border-b border-white/10">
-    <div class="mx-auto px-4 py-4 flex items-center justify-between">
+<body class="min-h-screen bg-[#050816] text-slate-100 antialiased relative overflow-x-hidden">
+
+  <!-- Background Effects -->
+  <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+
+    <!-- Main Blue Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2
+      w-[90vw] max-w-[800px]
+      h-[250px] sm:h-[350px] md:h-[450px]
+      rounded-full
+      bg-blue-500/15
+      blur-[100px]">
+    </div>
+
+    <!-- Purple Aura -->
+    <div class="absolute top-[-100px] left-1/2 -translate-x-1/2
+      w-[85vw] max-w-[700px]
+      h-[300px] md:h-[400px]
+      bg-gradient-to-b
+      from-purple-600/20
+      via-purple-900/5
+      to-transparent
+      blur-[100px]">
+    </div>
+
+    <!-- Header Light Line -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2
+      w-[70vw] max-w-[600px]
+      h-[2px]
+      bg-gradient-to-r
+      from-transparent
+      via-purple-400/40
+      to-transparent">
+    </div>
+
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/[0.03] backdrop-blur-2xl border-b border-white/10 rounded-2xl">
+
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
 
       <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <img src="src/assets/logo.svg" alt="DesignHub Logo" class="w-9 h-9 md:w-10 md:h-10" />
+      <div class="flex items-center gap-3">
+        <img src="src/assets/logo.svg" alt="DesignHub Logo" class="w-9 h-9 md:w-10 md:h-10">
 
-        <span class="text-white text-lg md:text-xl font-semibold tracking-wide">
+        <span class="text-white text-xl md:text-3xl font-semibold tracking-wide">
           Design<span class="text-pink-500">Hub</span>
         </span>
       </div>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-medium">
-        <a href="#" class="group relative text-white/70 hover:text-white transition">
-          <span class="text-base lg:text-lg font-semibold">Home</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-500 group-hover:w-full transition-all"></span>
-        </a>
-
-        <a href="#" class="group relative text-white/70 hover:text-white transition">
-          <span class="text-base lg:text-lg font-semibold">About</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 group-hover:w-full transition-all"></span>
-        </a>
-
-        <a href="#" class="group relative text-white/70 hover:text-white transition">
-          <span class="text-base lg:text-lg font-semibold">Contact</span>
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 group-hover:w-full transition-all"></span>
-        </a>
+      <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
+        <a href="#" class="text-white/70 hover:text-white transition">Home</a>
+        <a href="#" class="text-white/70 hover:text-white transition">About</a>
+        <a href="#" class="text-white/70 hover:text-white transition">Contact</a>
 
         <button
-          class="ml-4 px-4 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition text-white text-sm lg:text-base">
+          class="ml-2 px-5 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:scale-105 transition">
           Get Started
         </button>
       </nav>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Button -->
       <button id="menuBtn" class="md:hidden text-white text-2xl">
         ☰
       </button>
+
     </div>
 
-    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
       <div class="flex flex-col gap-3">
 
         <a href="#"
-          class="flex items-center justify-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover:text-white transition">
+          class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
           Home
         </a>
 
         <a href="#"
-          class="flex items-center justify-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover:text-white transition">
+          class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
           About
         </a>
 
         <a href="#"
-          class="flex items-center justify-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover:text-white transition">
+          class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
           Contact
         </a>
 
-        <button class="mt-2 w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium">
+        <button class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium">
           Get Started
         </button>
 
       </div>
     </div>
+
   </header>
   <main></main>
   <footer></footer>
