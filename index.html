@@ -62,14 +62,31 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
-        <a href="#" class="text-white/70 hover:text-white transition">Home</a>
-        <a href="#" class="text-white/70 hover:text-white transition">About</a>
-        <a href="#" class="text-white/70 hover:text-white transition">Contact</a>
+        <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+          <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
+            <span class="text-[20px] font-semibold tracking-wide">Home</span>
 
-        <button
-          class="ml-2 px-5 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:scale-105 transition">
-          Get Started
-        </button>
+            <!-- underline animation -->
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-500 
+                 group-hover:w-full transition-all duration-300"></span>
+          </a>
+
+          <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
+            <span class="text-[20px] font-semibold tracking-wide">About</span>
+
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 
+                 group-hover:w-full transition-all duration-300"></span>
+          </a>
+
+          <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
+            <span class="text-[20px] font-semibold tracking-wide">Contact</span>
+
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 
+                 group-hover:w-full transition-all duration-300"></span>
+          </a>
+        </nav>
+
+
       </nav>
 
       <!-- Mobile Button -->
@@ -106,7 +123,67 @@
     </div>
 
   </header>
-  <main></main>
+
+  <!-- main body section  -->
+  <main>
+    <!-- landing page section  -->
+    <section id="landingPage"
+      class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-12 animate-fade-up">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Content -->
+        <div class="text-center lg:text-left order-1">
+          <div
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-gradient-to-r from-blue-500/10 via-violet-500/10 to-pink-500/10backdrop-blur-xl">
+            <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+            <span class="text-sm text-white/80 font-medium">
+              UI Inspiration Platform
+            </span>
+          </div>
+
+          <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+            Beautiful
+            <span class="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+              Interfaces,
+            </span>
+            Endless Inspiration
+          </h1>
+
+          <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-white/60 leading-relaxed">
+            Explore modern interfaces, elegant layouts and inspiring
+            design patterns built for the next generation of web experiences.
+          </p>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="relative flex justify-center order-2">
+
+          <!-- Glow -->
+          <div
+            class="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-blue-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-[100px]">
+          </div>
+
+          <!-- Image Wrapper Container -->
+          <div class="relative group mt-12 flex justify-center items-center">
+            <div
+              class="absolute w-[80%] h-[80%] rounded-full bg-purple-600/20 blur-[100px] pointer-events-none -z-10 transition-all duration-700 group-hover:bg-purple-500/30">
+            </div>
+            <div
+              class="absolute bottom-4 left-1/4 w-[40%] h-[40%] rounded-full bg-cyan-500/20 blur-[80px] pointer-events-none -z-10">
+            </div>
+            <div
+              class="absolute top-12 left-12 w-[30%] h-[30%] rounded-full bg-pink-500/15 blur-[70px] pointer-events-none -z-10">
+            </div>
+            <div
+              class="absolute inset-0 max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] mx-auto rounded-2xl shadow-[0_0_50px_0_rgba(0,0,0,0.8)] pointer-events-none -z-10">
+            </div>
+            <img src="src/assets/herosection.png" alt="UI Design Preview"
+              class="relative w-full max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] opacity-95 mix-blend-plus-lighter transition-all duration-500 group-hover:scale-[1.01] group-hover:opacity-100 [mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)]">
+          </div>
+        </div>
+    </section>
+  </main>
   <footer></footer>
 </body>
 <script src="src/scripts/main.js" type="module"></script>
