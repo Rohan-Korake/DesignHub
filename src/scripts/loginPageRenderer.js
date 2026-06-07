@@ -19,7 +19,7 @@ export function renderLoginPages() {
     'src/assets/loginPages/13.webp',
   ];
 
-  // load the pages into constiner
+  // load the pages into container
   loginPages.forEach((element) => {
     uiPagesContainer.innerHTML += `
         <div class="group overflow-hidden rounded-2xl border border-purple-900/30 bg-[#0b0b1e] cursor-pointer">
