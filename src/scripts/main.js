@@ -1,5 +1,6 @@
 import { renderLoginPages } from './loginPageRenderer.js';
 import { renderCategoryCard } from './renderCategoryCard.js';
+import { renderSignupPages } from './signupPageRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCategoryCard();
@@ -20,7 +21,6 @@ mobileMenu.addEventListener('click', () => {
 // handle explore button event
 document.addEventListener('click', async (e) => {
   if (e.target.classList.contains('explore-btn')) {
-    console.log('Rohan');
     const id = e.target.id;
     if (id) {
       await handleRendering(id);
@@ -31,15 +31,18 @@ document.addEventListener('click', async (e) => {
   }
 });
 
+const sectionHeading = document.getElementById('sectionHeading');
 // handle rendering
 function handleRendering(uiPage) {
   switch (uiPage) {
     case 'loginCard':
+      sectionHeading.innerText = 'login Pages';
       renderLoginPages();
       break;
 
     case 'signupCard':
-      console.log('signupCard');
+      sectionHeading.innerText = 'Sign Up Pages';
+      renderSignupPages();
       break;
 
     case 'dashboardCard':
