@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,9 +7,10 @@
   <title>DesignHub</title>
   <link rel="shortcut icon" href="src/assets/logo.svg" type="image/x-icon" />
   <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-<body class="min-h-screen bg-[#050816] text-slate-100 antialiased relative overflow-x-hidden">
+<body class="min-h-screen bg-[#050816] text-slate-100 antialiased relative overflow-x-hidden scroll-smooth">
 
   <!-- Background Effects -->
   <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -38,7 +39,7 @@
     <div class="absolute top-0 left-1/2 -translate-x-1/2
       w-[70vw] max-w-[600px]
       h-[2px]
-      bg-gradient-to-r
+      bg-linear-to-r
       from-transparent
       via-purple-400/40
       to-transparent">
@@ -47,15 +48,14 @@
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/[0.03] backdrop-blur-2xl border-b border-white/10 rounded-2xl">
+  <header class="sticky top-0 z-50 bg-white/[0.03] backdrop-blur-2xl border-b border-white/10 rounded-b-2xl">
 
     <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
 
       <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <img src="src/assets/logo.svg" alt="DesignHub Logo" class="w-9 h-9 md:w-10 md:h-10">
-
-        <span class="text-white text-xl md:text-3xl font-semibold tracking-wide">
+      <div class="flex items-center gap-3 ">
+        <img src="src/assets/logo.svg" alt="DesignHub Logo" class="w-8 h-8 md:w-10 md:h-10">
+        <span class="text-white text-2  xl md:text-3xl font-bold tracking-wide">
           Design<span class="text-pink-500">Hub</span>
         </span>
       </div>
@@ -65,77 +65,66 @@
         <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
           <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
             <span class="text-[20px] font-semibold tracking-wide">Home</span>
-
-            <!-- underline animation -->
-            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-500 
-                 group-hover:w-full transition-all duration-300"></span>
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-500 group-hover:w-full transition-all duration-300"></span>
           </a>
 
           <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
             <span class="text-[20px] font-semibold tracking-wide">About</span>
-
-            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 
-                 group-hover:w-full transition-all duration-300"></span>
-          </a>
-
-          <a href="#" class="relative text-white/70 hover:text-white transition-all duration-300 group">
-            <span class="text-[20px] font-semibold tracking-wide">Contact</span>
-
-            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 
-                 group-hover:w-full transition-all duration-300"></span>
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 group-hover:w-full transition-all duration-300"></span>
           </a>
         </nav>
-
-
+        <button onclick="document.getElementById('uiCategoryCards').scrollIntoView({ behavior: 'smooth' })"
+          class="relative px-6 py-2 font-medium text-white rounded-full bg-gradient-to-r from-indigo-500 via-purple-500
+          to-pink-500 hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/30 overflow-hidden group">
+          <span class="relative z-10">Get Started</span>
+          <!-- glow effect -->
+          <span class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+        </button>
       </nav>
 
       <!-- Mobile Button -->
       <button id="menuBtn" class="md:hidden text-white text-2xl">
         ☰
       </button>
-
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
       <div class="flex flex-col gap-3">
-
         <a href="#"
           class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
           Home
         </a>
-
         <a href="#"
           class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
           About
         </a>
-
-        <a href="#"
-          class="flex justify-center items-center py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10">
-          Contact
-        </a>
-
-        <button class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium">
+        <button class="w-full py-3 rounded-xl bg-linear-to-r from-pink-500 to-purple-600 text-white font-medium">
           Get Started
         </button>
-
       </div>
     </div>
-
   </header>
 
   <!-- main body section  -->
-  <main>
-    <!-- landing page section  -->
+  <main class="scroll-smooth">
+
+    <!-- landing page section -->
     <section id="landingPage"
-      class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-12 animate-fade-up">
-      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      class="relative min-h-[85vh] lg:min-h-[70vh] flex items-center px-4 sm:px-6 lg:px-12 animate-fade-up">
+
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         <!-- Left Content -->
         <div class="text-center lg:text-left order-1">
-          <div
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-gradient-to-r from-blue-500/10 via-violet-500/10 to-pink-500/10backdrop-blur-xl">
-            <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+
+          <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 
+          bg-linear-to-r from-blue-500/10 via-violet-500/10 to-pink-500/10 backdrop-blur-xl">
+
+            <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span>
+
             <span class="text-sm text-white/80 font-medium">
               UI Inspiration Platform
             </span>
@@ -143,45 +132,55 @@
 
           <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
             Beautiful
-            <span class="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+            <span class="bg-linear-to-r from-blue-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
               Interfaces,
             </span>
             Endless Inspiration
           </h1>
 
           <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-white/60 leading-relaxed">
-            Explore modern interfaces, elegant layouts and inspiring
-            design patterns built for the next generation of web experiences.
+            Explore modern interfaces, elegant layouts and inspiring design patterns built for the next generation of
+            web experiences.
           </p>
-
         </div>
 
         <!-- Right Side -->
         <div class="relative flex justify-center order-2">
 
           <!-- Glow -->
-          <div
-            class="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-blue-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-[100px]">
+          <div class="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[500px] md:h-[500px] 
+          bg-linear-to-r from-blue-500/20 via-violet-500/20 to-pink-500/20 rounded-full blur-[100px]">
           </div>
 
-          <!-- Image Wrapper Container -->
           <div class="relative group mt-12 flex justify-center items-center">
-            <div
-              class="absolute w-[80%] h-[80%] rounded-full bg-purple-600/20 blur-[100px] pointer-events-none -z-10 transition-all duration-700 group-hover:bg-purple-500/30">
+
+            <div class="absolute inset-0 max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]
+            mx-auto rounded-2xl shadow-[0_0_50px_0_rgba(0,0,0,0.8)] -z-10">
             </div>
-            <div
-              class="absolute bottom-4 left-1/4 w-[40%] h-[40%] rounded-full bg-cyan-500/20 blur-[80px] pointer-events-none -z-10">
-            </div>
-            <div
-              class="absolute top-12 left-12 w-[30%] h-[30%] rounded-full bg-pink-500/15 blur-[70px] pointer-events-none -z-10">
-            </div>
-            <div
-              class="absolute inset-0 max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] mx-auto rounded-2xl shadow-[0_0_50px_0_rgba(0,0,0,0.8)] pointer-events-none -z-10">
-            </div>
-            <img src="src/assets/herosection.png" alt="UI Design Preview"
-              class="relative w-full max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] opacity-95 mix-blend-plus-lighter transition-all duration-500 group-hover:scale-[1.01] group-hover:opacity-100 [mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)]">
+
+            <img src="src/assets/herosection.png" alt="UI Design Preview" class="relative w-full max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]
+            opacity-95 mix-blend-plus-lighter transition-all duration-500
+            group-hover:scale-[1.01] group-hover:opacity-100
+            [mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)]
+            [-webkit-mask-image:radial-gradient(circle_at_center,black_55%,transparent_100%)]">
+
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- UI Collections -->
+    <section id="uiCategoryCards" class="scroll-mt-24">
+      <div class="max-w-7xl mx-auto min-h-150">
+        <!-- GRID -->
+        <div id="uiCategoryCardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
+        </div>
+      </div>
+    </section>
+
+    <section id="uiPageContainer">
+
     </section>
   </main>
   <footer></footer>
