@@ -1,4 +1,5 @@
 import { renderdashboardPages } from './dashboardPageRenderer.js';
+import { renderLandingPages } from './landingPageRenderer.js';
 import { renderLoginPages } from './loginPageRenderer.js';
 import { renderCategoryCard } from './renderCategoryCard.js';
 import { renderSignupPages } from './signupPageRenderer.js';
@@ -52,7 +53,8 @@ function handleRendering(uiPage) {
       break;
 
     case 'landingCard':
-      console.log('landingCard');
+      sectionHeading.innerText = 'Landing Page';
+      renderLandingPages();
       break;
 
     case 'formCard':

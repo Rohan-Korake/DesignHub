@@ -33,7 +33,7 @@ export async function renderCategoryCard() {
     {
       icon: `<i class="fa-solid fa-list-check text-lg"></i>`,
       name: 'Forms UI',
-      desc: 'Smart input forms with validation design.',
+      desc: 'Smart input forms with interative design.',
       id: 'formCard',
     },
     {
@@ -53,18 +53,6 @@ export async function renderCategoryCard() {
       name: 'Analytics UI',
       desc: 'Charts and insights dashboards.',
       id: 'analyticsCard',
-    },
-    {
-      icon: `<i class="fa-solid fa-bars-progress text-lg"></i>`,
-      name: 'Task Manager UI',
-      desc: 'Todo and project management interfaces.',
-      id: 'taskCard',
-    },
-    {
-      icon: `<i class="fa-solid fa-palette text-lg"></i>`,
-      name: 'Design System',
-      desc: 'Components, colors, and UI guidelines.',
-      id: 'designSystemCard',
     },
   ];
 
