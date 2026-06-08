@@ -27,6 +27,7 @@ export function imagePreview() {
     }
   });
 
+  //   handle model click close event
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('imageModel')) {
       modal.classList.remove('flex');
