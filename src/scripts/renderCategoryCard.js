@@ -49,10 +49,10 @@ export async function renderCategoryCard() {
       id: 'pricingCard',
     },
     {
-      icon: `<i class="fa-solid fa-chart-line text-lg"></i>`,
-      name: 'Analytics UI',
-      desc: 'Charts and insights dashboards.',
-      id: 'analyticsCard',
+      icon: `<i class="fa-solid fa-user text-lg"></i>`,
+      name: 'Profile Pages',
+      desc: 'User profiles and personal dashboards.',
+      id: 'profileCard',
     },
   ];
 

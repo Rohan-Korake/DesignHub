@@ -3,6 +3,7 @@ import { renderdashboardPages } from './dashboardPageRenderer.js';
 import { renderFormPages } from './formPageRenderer.js';
 import { renderLandingPages } from './landingPageRenderer.js';
 import { renderLoginPages } from './loginPageRenderer.js';
+import { renderProfilePages } from './profilePageRenderer.js';
 import { renderCategoryCard } from './renderCategoryCard.js';
 import { renderPricingPages } from './renderPricingPages.js';
 import { renderSignupPages } from './signupPageRenderer.js';
@@ -75,16 +76,9 @@ function handleRendering(uiPage) {
       renderPricingPages();
       break;
 
-    case 'analyticsCard':
-      console.log('analyticsCard');
-      break;
-
-    case 'taskCard':
-      console.log('taskCard');
-      break;
-
-    case 'designSystemCard':
-      console.log('designSystemCard');
+    case 'profileCard':
+      sectionHeading.innerText = 'User Profile';
+      renderProfilePages();
       break;
 
     default:
