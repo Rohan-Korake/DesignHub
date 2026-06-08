@@ -4,6 +4,7 @@ import { renderFormPages } from './formPageRenderer.js';
 import { renderLandingPages } from './landingPageRenderer.js';
 import { renderLoginPages } from './loginPageRenderer.js';
 import { renderCategoryCard } from './renderCategoryCard.js';
+import { renderPricingPages } from './renderPricingPages.js';
 import { renderSignupPages } from './signupPageRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,7 +71,8 @@ function handleRendering(uiPage) {
       break;
 
     case 'pricingCard':
-      console.log('pricingCard');
+      sectionHeading.innerText = 'Pircing Page';
+      renderPricingPages();
       break;
 
     case 'analyticsCard':
