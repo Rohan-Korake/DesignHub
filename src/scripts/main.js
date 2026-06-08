@@ -1,3 +1,4 @@
+import { renderCard } from './cardRenderer.js';
 import { renderdashboardPages } from './dashboardPageRenderer.js';
 import { renderFormPages } from './formPageRenderer.js';
 import { renderLandingPages } from './landingPageRenderer.js';
@@ -64,7 +65,8 @@ function handleRendering(uiPage) {
       break;
 
     case 'uiCard':
-      console.log('uiCard');
+      sectionHeading.innerText = 'Card UI';
+      renderCard();
       break;
 
     case 'pricingCard':
