@@ -1,3 +1,5 @@
+import { addCardImage } from './main.js';
+
 export function renderSignupPages() {
   const uiPagesContainer = document.getElementById('uiPagesContainer');
   uiPagesContainer.innerHTML = '';
@@ -19,11 +21,7 @@ export function renderSignupPages() {
   ];
 
   // load the pages into container
-  signupPages.forEach((element) => {
-    uiPagesContainer.innerHTML += `
-        <div class="group overflow-hidden rounded-2xl border border-purple-900/30 bg-[#0b0b1e] cursor-pointer">
-          <img src="${element}" alt="Login Page UI" class="w-full aspect-16/10 object-cover transition duration-500 group-hover:scale-105">
-        </div>
-    `;
+  signupPages.forEach((imageUrl) => {
+    addCardImage(imageUrl);
   });
 }

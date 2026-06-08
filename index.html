@@ -203,6 +203,18 @@
       <div id="uiPagesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
+    <!-- preview image -->
+    <div id="imageModal" class="fixed inset-0 hidden items-center justify-center bg-black/90 z-50 p-2 sm:p-4 md:p-6">
+      <!-- Close Button -->
+      <button id="closeModal"
+        class="absolute top-3 right-3 sm:top-5 sm:right-5 text-white text-3xl sm:text-4xl md:text-5xl cursor-pointer hover:scale-110 transition">
+        &times;
+      </button>
+      <!-- Image -->
+      <img id="modalImage" src="" alt="Preview"
+        class="w-auto h-auto max-w-full max-h-[85vh] sm:max-h-[88vh] md:max-h-[90vh] rounded-lg sm:rounded-xl shadow-2xl object-contain">
+    </div>
+
   </main>
   <footer></footer>
 </body>

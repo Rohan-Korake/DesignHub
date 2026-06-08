@@ -1,3 +1,5 @@
+import { addCardImage } from './main.js';
+
 export function renderPricingPages() {
   const uiPagesContainer = document.getElementById('uiPagesContainer');
   uiPagesContainer.innerHTML = '';
@@ -22,11 +24,7 @@ export function renderPricingPages() {
   ];
 
   // load the pages into container
-  pricingPages.forEach((element) => {
-    uiPagesContainer.innerHTML += `
-        <div class="group overflow-hidden rounded-2xl border border-purple-900/30 bg-[#0b0b1e] cursor-pointer">
-          <img src="${element}" alt="Login Page UI" class="w-full aspect-16/10 object-cover transition duration-500 group-hover:scale-105">
-        </div>
-    `;
+  pricingPages.forEach((imageUrl) => {
+    addCardImage(imageUrl);
   });
 }

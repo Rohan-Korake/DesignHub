@@ -10,6 +10,7 @@ import { renderSignupPages } from './signupPageRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCategoryCard();
+  imagePreview();
 });
 
 // handle nav bar (hambarger)
@@ -85,4 +86,15 @@ function handleRendering(uiPage) {
       return;
       break;
   }
+}
+
+// add image url
+export function addCardImage(imageUrl) {
+  const uiPagesContainer = document.getElementById('uiPagesContainer');
+
+  uiPagesContainer.innerHTML += `
+  <div class="group overflow-hidden rounded-2xl border border-purple-900/30 bg-[#0b0b1e] cursor-pointer">
+    <img src="${imageUrl}" alt="Login Page UI" class="preview-image w-full aspect-16/10 object-cover transition duration-500 group-hover:scale-105">
+  </div>
+`;
 }
