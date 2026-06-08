@@ -1,6 +1,7 @@
 import { renderCard } from './cardRenderer.js';
 import { renderdashboardPages } from './dashboardPageRenderer.js';
 import { renderFormPages } from './formPageRenderer.js';
+import { imagePreview } from './imagePreview.js';
 import { renderLandingPages } from './landingPageRenderer.js';
 import { renderLoginPages } from './loginPageRenderer.js';
 import { renderProfilePages } from './profilePageRenderer.js';
